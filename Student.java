@@ -7,8 +7,8 @@ public class Student{
   private int StudentID;
   private String courses;
   private int tuitionbalance;
-  private int costofcourses=499;
-  private int id=1000;
+  private static int costofcourses=499;
+  private static int id=1000;
   public Student(){
     Scanner sc = new Scanner(System.in);
     System.out.println("enter your first name:");
@@ -39,6 +39,18 @@ public class Student{
     }while(1 !=0){
        System.out.println("enrolled in:"+courses);
        System.out.println("tuitionbalance:"+tuitionbalance);
+    }
+    public void viewbalance(){
+       System.out.println("your balance is:"+tuitionbalance);
+    }
+    public void paytuition(){
+      viewbalance();
+       System.out.println("enter your payment:");
+      Scanner sc = new Scanner(System.in);
+      String payment = sc.nextInt();
+      tuitionbalance = tuitionbalance+payment;
+      System.out.println("thank you for your payment"+payment);
+      viewbalance();
     }
   }
   
