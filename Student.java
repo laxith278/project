@@ -52,6 +52,9 @@ public class Student{
       System.out.println("thank you for your payment"+payment);
       viewbalance();
     }
+    public String showinfo(){
+      return "firstname:"+firstname+" "+lastname + "\nyear"+year + "\ncourses enrolled:"+ courses + "\nbalance:" + tuitionbalance;
+    }
   }
   
   
